@@ -58,7 +58,7 @@ figma.ui.onmessage = msg => {
     figma.closePlugin('たむたむが爆誕しました。');
   }
   if (msg.type === 'cancel') {
-    figma.closePlugin('また来てね！');
+    figma.closePlugin('またつかってね！');
   }
 };
 
