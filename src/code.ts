@@ -27,8 +27,13 @@ figma.ui.onmessage = msg => {
     }
     const vector = createAndResizeTamtam(selectedSVG, msg.tamtamColor, msg.tamtamSize);
     if (vector) {
-      //ページに挿入
-      figma.currentPage.appendChild(vector);
+      //フレームもしくはページに挿入
+      const selectedNode = figma.currentPage.selection[0];
+      if(selectedNode && selectedNode.type === 'FRAME') {
+        selectedNode.appendChild(vector);
+      } else {
+        figma.currentPage.appendChild(vector);
+      }
       nodes.push(vector);
     }
     //選択状態にしてviewport内に移動
