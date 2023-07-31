@@ -1,0 +1,31 @@
+<div class="ui">
+  <h2>
+    <img class="kv" src="<%= require('./components/ui/cover.svg') %>" alt="TAMTAM MAKER">
+  </h2>
+  <section class="section">
+    <h3 class="question">どのたむたむをつくる？</h3>
+    <select name="tamtamType" id="tamtamType">
+      <option value="default">普通のたむたむ</option>
+      <option value="excited">興奮たむたむ</option>
+      <option value="crying">泣き虫たむたむ</option>
+      <option value="ochobo">おちょぼ口たむたむ</option>
+      <option value="sour">すっぱいたむたむ</option>
+    </select>
+  </section>
+  
+  <section class="section">
+    <h3 class="question">色はどうする？</h3>
+    <input type="color" value="#D3D3D3" name="tamtamColor" id="tamtamColor">
+  </section>
+  
+  <section class="section">
+    <h3 class="question">大きさはどうする？</h3>
+    <input type="number" value="150" name="tamtamSize" id="tamtamSize">
+    <small>※単位はpxだよ。正方形だよ。</small>
+  </section>
+  
+  <div class="buttonGroup">
+    <button id="create" class="create">つくる</button>
+    <button id="cancel" class="cancel">つくらない</button>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+:root {
+  --color-accent: #f8fc30;
+  --color-base: #f7f7f7;
+  --color-text: #181818;
+  --color-notice: #777777;
+  --color-tamtam: #d3d3d3;
+  --color-border: #d5d5d5;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-base);
+}
+
+.ui {
+  padding: 12px;
+}
+
+.kv {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 0.5em;
+}
+
+.section {
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.question {
+  font-size: 14px;
+  margin: 0.75em 0 0.5em;
+}
+
+input,select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+input[type="color"] {
+  width: 25%;
+  padding: 2px;
+  height: 40px;
+}
+
+small {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-notice);
+}
+
+.buttonGroup {
+  margin-top: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+button + button {
+  margin-top: 8px;
+}
+
+.create {
+  color: #fff;
+  background-color: var(--color-text);
+}
+
+.cancel {
+  color: var(--color-text);
+  background-color: var(--color-tamtam);
+}
