@@ -41,7 +41,7 @@ figma.ui.onmessage = msg => {
       const rgb = hexToRgb(msg.tamtamColor);
       let baseLayer = vector.findOne(n => n.name === "baseLayer") as VectorNode;
       const fills = clone(baseLayer.fills);
-      fills.color = {
+      fills[0].color = {
         r: rgb.r,
         g: rgb.g,
         b: rgb.b,
