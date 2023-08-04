@@ -5,7 +5,13 @@ window.addEventListener('load', () => {
   const cancel = document.getElementById('cancel')!;
   const tamtamTypeInput = document.getElementById('tamtamType') as HTMLSelectElement;
   const tamtamColorInput = document.getElementById('tamtamColor') as HTMLInputElement;
+  const tamtamColorDefaultBtn = document.getElementById('tamtamColorDefault') as HTMLButtonElement;
   const tamtamSizeInput = document.getElementById('tamtamSize') as HTMLInputElement;
+  const defaultColor = '#D3D3D3';
+
+  tamtamColorDefaultBtn.onclick = () => {
+    tamtamColorInput.value = defaultColor;
+  }
 
   create.onclick = () => {
     const tamtamType = tamtamTypeInput.value;

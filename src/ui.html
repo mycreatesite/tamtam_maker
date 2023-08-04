@@ -15,7 +15,10 @@
   
   <section class="section">
     <h3 class="question">色はどうする？</h3>
-    <input type="color" value="#D3D3D3" name="tamtamColor" id="tamtamColor">
+    <div class="colorGroup">
+      <input type="color" value="#D3D3D3" name="tamtamColor" id="tamtamColor">
+      <button type="button" id="tamtamColorDefault"><span></span>デフォルト</button>
+    </div>
     <small>※淡い色合いがおすすめだよ。</small>
   </section>
   
@@ -25,8 +28,8 @@
     <small>※単位はpxだよ。正方形だよ。</small>
   </section>
   
-  <div class="buttonGroup">
-    <button id="create" class="create">つくる</button>
-    <button id="cancel" class="cancel">つくらない</button>
+  <div class="decisionbuttonGroup">
+    <button type="button" id="create" class="create _btn">つくる</button>
+    <button type="button" id="cancel" class="cancel _btn">つくらない</button>
   </div>
 </div>

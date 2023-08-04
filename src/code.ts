@@ -54,7 +54,7 @@ function createAndResizeTamtam(svg: string, hex: string, size: string) {
   const sizeNum = parseInt(size);
   vector.resize(sizeNum, sizeNum);
   //色の設定
-  const rgb = hexToRgb(hex);
+  const rgb = figma.util.rgb(hex);
   let baseLayer = vector.findOne(n => n.name === "baseLayer") as VectorNode;
   const fills = clone(baseLayer.fills);
   fills[0].color = {
@@ -70,14 +70,6 @@ function createAndResizeTamtam(svg: string, hex: string, size: string) {
 //baseLayerの色を変更するためにfillsをクローンする必要がある
 function clone(val: readonly Paint[] | typeof figma.mixed) {
   return JSON.parse(JSON.stringify(val));
-}
-
-//hex→rgbに変換
-function hexToRgb(hex: string) {
-  const r = parseInt(hex.substring(1, 3), 16);
-  const g = parseInt(hex.substring(3, 5), 16);
-  const b = parseInt(hex.substring(5, 7), 16);
-  return { r: r / 255, g: g / 255, b: b / 255 };
 }
 
 //エラー関数
