@@ -34,6 +34,7 @@ module.exports = (env, argv) => ({
       filename: 'ui.html',
       inlineSource: '.(js)$',
       chunks: ['ui'],
+      cache: false,
     }),
     new HtmlInlineScriptWebpackPlugin({
       scriptMatchPattern: [/ui.js$/],
